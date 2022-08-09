@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}add{% endblock %}
+
+{% block body %}
+    <section class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Register</h1>
+
+                {{ form_start(registrationForm) }}
+
+                <fieldset class="mb-3">
+                    {{ form_row(registrationForm.email) }}
+
+                </fieldset>
+                {{ form_row(registrationForm.plainPassword, {
+                    label: 'Password'
+                }) }}
+
+                <button type="submit" class="btn btn-primary my-3">add</button>
+                {{ form_end(registrationForm) }}
+            </div>
+        </div>
+    </section>
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+{% endblock %}

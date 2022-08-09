@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}update{% endblock %}
+
+{% block body %}
+    <section class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Register</h1>
+                {{ form_start(Form) }}
+                <fieldset class="mb-3">
+                    {{ form_row(Form.email) }}
+                    {{ form_row(Form.firstName) }}
+                    {{ form_row(Form.Name) }}
+                    {{ form_row(Form.save) }}
+
+
+                </fieldset>
+
+                <button type="submit" class="btn btn-primary my-3">update</button>
+                {{ form_end(Form) }}
+            </div>
+        </div>
+    </section>
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+{% endblock %}

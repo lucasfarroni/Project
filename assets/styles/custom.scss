@@ -1,0 +1,12 @@
+.table {
+  > thead {
+    vertical-align: top;
+    background-color: red;
+  }
+  > :not(caption) > * > * {
+    padding: 2rem 2rem;
+    background-color: yellow;
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+  }
+}
